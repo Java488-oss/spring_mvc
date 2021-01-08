@@ -15,7 +15,7 @@ public class CarServiceImpl implements CarService {
         listCar.add(new Car("car5",223,180));
         }
 
-    public List<Car> getCar(int count){
+    public List<Car> getCar(Integer count){
         List<Car> newListCar = new ArrayList<>();
         try{
             if(count>listCar.size()){
@@ -26,7 +26,7 @@ public class CarServiceImpl implements CarService {
                 }
                 return newListCar;
             }
-        } catch (NumberFormatException e) {
+        } catch (NullPointerException e) {
             return listCar;
         }
     }
